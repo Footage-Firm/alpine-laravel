@@ -22,8 +22,9 @@ COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Configure composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Add application
+# Setup Application Folder
 RUN mkdir -p /var/www/html
+WORKDIR /var/www/html
 
 EXPOSE 80 443
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
