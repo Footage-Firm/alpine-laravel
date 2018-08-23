@@ -1,5 +1,5 @@
 # Modeled after https://github.com/TrafeX/docker-php-nginx
-FROM alpine:3.6
+FROM alpine:3.8
 LABEL Maintainer="Jonathan Cox <jcox@storyblocks.com>" \
       Description="A Laravel optimized Docker image using Alpine Linux."
       
